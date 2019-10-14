@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Sergio Duarte" />
+  <meta name="description" content="Ryderz Calendar" />
+  <title>Ryderz Champiomship</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="nysl_3.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="vue-motor">
+
+  <div class="container formatoPagina"></div>
+
+    <a href="home.html">
+      <div class="divHeader">
+        <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+      </div>
+    </a>
+    <div class="espacioInferior">
+      <ul class="nav nav-pills justify-content-center ">
+        <li class="nav-item botonLi">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item botonLi">
+          <a class="nav-link " href="calendar_vue.html">Calendar</a>
+        </li>
+        <li class="nav-item botonLi">
+          <a class="nav-link" href="ranking.html">Ranking</a>
+        </li>
+      </ul>
+    </div>
+    <div class="iconosFlex">
+      <a href="javascript:history.back()" class="flecha-up"></a>
+    </div>
+    <h2 class="h2Big">Let's chat About!</h2>
+
+    <div class="chat container flex-column">
+      <div class="backgroundChat">
+        <div class="d-flex justify-content-start chatContentFit"  id="chatID">
+          <div class="talk-bubble tri-right left-top round">
+            <div class="talktextLeft" >
+              <p class="pChat name">Loading chat</p>
+              <p class="pChat">It is worth waiting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="backgroundBlanco">
+        <div class="inputChat  justify-content-around align-items-center mt-2 div.sticky">
+          <input type="text" id="chat1Messages" class="form-control form-rounded">
+          <button class="mdc-fab" @click="pruebaEscribirMensaje()">
+            <i class="material-icons mdc-fab__icon" id="">send</i>
+          </button>
+          <i class="material-icons" @click="logInWithGoogle()">account_circle</i>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="textoCentrado copyDispositivosRanking">
+      <p> <b>Ryderz &reg;</b>
+        <p>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+  <script>
+    let firebaseConfig = {
+      apiKey: "AIzaSyAB23E28Pu1b8HUTD9zvoLOrqorh4H9hbQ",
+      authDomain: "ryder-57290.firebaseapp.com",
+      databaseURL: "https://ryder-57290.firebaseio.com",
+      projectId: "ryder-57290",
+      storageBucket: "ryder-57290.appspot.com",
+      messagingSenderId: "997978891812",
+    }
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+      <script src="./vue.js"></script>
+      <script src="./Ryderz_vue.js"></script>  
+</body>
+
+</html>

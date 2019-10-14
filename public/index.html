@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.5.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.5.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.5.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.5.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.5.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="nysl_3.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+  <body>
+      <div class="container formatoPagina" id="vue-motor" v-show="showHome">
+          <div  class="divHeader">
+              <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+          </div>  
+          <div class="espacioInferior">
+          <ul class="nav nav-pills justify-content-center espacioInferior">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html"  @click="isShowing ^= true">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="calendar.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ranking.html">Ranking</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+            <h1 class="textoCentrado espacioInferior3rem">Who we are</h1>
+          </div>
+      
+       
+          
+          <div class="bodyFlex">
+            <div id="upcoming">
+              <p class="indent">Ryders is a organization where we put <br> a great variety of riders from differents <br> disciplines using the same motorcycles in a scenario <br> design to challenge their habilities to the <br> maximum. Who will win?</p>
+            </div>
+          </div>
+          <div class="videoFlex espacioInferior3rem">
+            <h2>Get a Taste...</h2>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/IA_6QDW4Vdo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="iframeMotos" ></iframe>    
+            </div>
+            <div class="textoCentrado">
+                <p> <b>Ryderz  &reg;</b> <p>
+            </div>
+        
+        </div>
+        <div class="textoCentrado">
+            <p> <b>Ryderz  &reg;</b> <p>
+        </div>
+    
+      </div>
+      <div class="container formatoPagina">
+        <div  class="divHeader">
+          <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+        </div>
+    
+        <div class="espacioInferior">
+          <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="calendar.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="ranking.html">Ranking</a>
+            </li>
+          </ul>
+        </div>
+        <div id="bodyFlex">
+          <h2 class="textoCentrado">Ryderz Ranking</h2>
+          <div>
+            <table class="table table-striped table-dark">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th></th>
+                  <th>Ryder</th>
+                  <th>Country</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="numero1" >1</td>
+                  <td></td>
+                  <td>Valentino Rossi</td>
+                  <td>ITA</td>
+                  <td>180</td>
+                </tr>
+                <tr>
+                  <td class="numero2">2</td>
+                  <td></td>
+                  <td>Sete Gibernau</td>
+                  <td>SPA</td>
+                  <td>150</td>
+                </tr>
+                <tr>
+                  <td class="numero3">3</td>
+                  <td></td>
+                  <td>Marc Marquez</td>
+                  <td>SPA</td>
+                  <td>144</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td>Johann Zarco</td>
+                  <td>FR</td>
+                  <td>141</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td></td>
+                  <td>Danillo Petrucci</td>
+                  <td>ITA</td>
+                  <td>132</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td></td>
+                  <td>Jorge Lorenzo</td>
+                  <td>SPA</td>
+                  <td>126</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td></td>
+                  <td>Cal Crutchlow</td>
+                  <td>GB</td>
+                  <td>111</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td></td>
+                  <td>Andrea Iannone</td>
+                  <td>ITA</td>
+                  <td>90</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td></td>
+                  <td>Sylvain Guintoli</td>
+                  <td>FR</td>
+                  <td>84</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td></td>
+                  <td>Alex Rins</td>
+                  <td>SPA</td>
+                  <td>81</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td></td>
+                  <td>Aleix Espargaro</td>
+                  <td>SPA</td>
+                  <td>78</td>
+                </tr>
+    
+              </tbody>
+            </table>
+          </div>
+    
+        </div>
+        <div class="textoCentrado">
+            <p> <b>Ryderz  &reg;</b> <p>
+        </div>
+    
+      </div>
+      <div class="container formatoPagina">
+        <div class="divHeader">
+          <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+        </div>
+    
+        <div class="espacioInferior">
+          <ul class="nav nav-pills justify-content-center ">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="calendar.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ranking.html">Ranking</a>
+            </li>
+          </ul>
+        </div>
+        <div  class="chat container flex-column">
+        <div class="backgroundChat">
+          <div class="d-flex justify-content-start">
+            <div class="talk-bubble tri-right left-top round">
+              <div class="talktextLeft">
+                <p class="pChat name">Capitan Pescanova</p>
+                <p class="pChat">Buenas</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-start">
+              <div class="talk-bubble tri-right left-top round">
+                <div class="talktextLeft">
+                  <p class="pChat name">Doraemon</p>
+                  <p class="pChat">Hola</p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="d-flex justify-content-start">
+                <div class="talk-bubble tri-right left-top round">
+                  <div class="talktextLeft">
+                    <p class="pChat name">Capitan Pescanova</p>
+                    <p class="pChat">Hola </p>
+                  </div>
+                </div>
+              </div>
+        
+          <div class="d-flex justify-content-start">
+            <div class="talk-bubble tri-right left-top round">
+              <div class="talktextLeft">
+                <p class="pChat name"> Doraemon</p>
+                <p class="pChat">ksks</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-start">
+            <div class="talk-bubble tri-right left-top round">
+              <div class="talktextLeft">
+                <p class="pChat name"> Capitan Pescanova</p>
+                <p class="pChat">pks</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-start">
+            <div class="talk-bubble tri-right left-top round">
+              <div class="talktextLeft">
+                <p class="pChat name">Doraemon</p>
+                <p class="pChat">dsgsd</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+          <div class="backgroundBlanco">
+            <div class="inputChat d-flex justify-content-around align-items-center mt-2 div.sticky">
+              <input type="text" id="chat1Messages" placeholder="Write a message" class="form-control form-rounded"> 
+              <button  disabled="disabled" class="mdc-fab">
+                <i class="material-icons mdc-fab__icon">send</i>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="textoCentrado">
+          <p> <b>Ryderz &reg;</b>
+            <p>
+        </div>
+      </div>
+      </div>
+    
+    
+      </div>
+      <div class="container formatoPagina">
+        <div id="pageheader" class="divHeader">
+            <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+        </div>  
+        
+      <div class="espacioInferior">
+      <ul class="nav nav-pills justify-content-center ">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="calendar.html">Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ranking.html">Ranking</a>
+        </li>
+      </ul>    
+    </div>
+      <div class="calendarFlex">
+        <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+        <div>
+          <img src="https://lh3.googleusercontent.com/u6ch8RQGmGNmenIuxA1t3TDIOoCgpFaG0NAXgdgSXplbQN9wF5-dsIZ3I_ZQe6rKQQca=s97" class="img-fluid tamañoFoto" alt="Valentino Rossi">
+        <p><b>Valentino Rossi</b></p>
+        </div>
+        <div class="middleTextCalendar">
+          <h3 class="calendarText">Date: 18th October 2019</h3>
+          <h3 class="calendarText">Track: Jerez de la Frontera</h3>
+        </div>
+        <div>
+          <img src="https://lh3.googleusercontent.com/Ysqrdh8-K_mk3H3PxyPowyLLGyO4ihDSz6lyy0v33LPfV5_YNCfIqkQJB-IVPvvIxr5cO0I=s97" class="img-fluid tamañoFoto" alt="Sete Gibernau">
+        <p><b>Sete Gibernau</b></p>
+        </div>
+      </div>
+                </div>
+                <div class="textoCentrado">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.552143255498!2d-6.036066984712671!3d36.70929857996724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0db8d2691e68e7%3A0x6b9e763f426cca6f!2sCircuito%20de%20Jerez!5e0!3m2!1ses!2ses!4v1567083296114!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+  
+                    
+    
+    <div class="textoCentrado">
+          <p> <b>Ryderz  &reg;</b> <p>
+      </div>
+    </div>
+  
+  
+    </div>
+          
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+    <script src="ryderz.js"></script>
+  </body>
+</html>

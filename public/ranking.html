@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Sergio Duarte" />
+  <meta name="description" content="Ryderz Ranking  " />
+  <title>Ryderz Champiomship</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="nysl_3.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <div class="container formatoPagina">
+    <a href="home.html">
+    <div  class="divHeader">
+      <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+    </div>
+  </a>
+    <div class="espacioInferior">
+        <ul class="nav nav-pills justify-content-center">
+          <li class="nav-item botonLi">
+            <a class="nav-link " href="home.html">Home</a>
+          </li>
+          <li class="nav-item botonLi">
+            <a class="nav-link" href="calendar_vue.html">Calendar</a>
+          </li>
+          <li class="nav-item botonLi">
+            <a class="nav-link active" href="ranking.html">Ranking</a>
+          </li>
+        </ul>
+      </div>
+  <div class="iconosFlex">
+    <a href="javascript:history.back()"  class="flecha-up" ></a>
+    <a href="chat.html">
+      <div id="chat-btn">
+      </div>
+    </a>  </div>
+    <i class="material-icons" @click="logInWithGoogle()">account_circle</i>
+
+    <div id="bodyFlex">
+      <h2 class="textoCentrado h2Meses h2X">Ryderz Ranking</h2>
+      <div>
+        <table class="table table-striped table-dark tableRanking">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th></th>
+              <th>Ryder</th>
+              <th>Country</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="numero1" >1</td>
+              <td></td>
+              <td><a href="http://www.valentinorossi.com/en/ style='text-decoration:none'">Valentino Rossi</a></td>
+              <td>ITA</td>
+              <td>180</td>
+            </tr>
+            <tr>
+              <td class="numero2">2</td>
+              <td></td>
+              <td><a href="http://www.setegibernau.com/ style='text-decoration:none'">Sete Gibernau</a></td>
+              <td>SPA</td>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td class="numero3">3</td>
+              <td></td>
+             <td> <a href="https://lh3.googleusercontent.com/EhxtCpGtMfiZeLhKc0KuQci4jLvg3x8Q4kttRfPer5l7EuTyNJH8r70oTGnPa7wY4Tr1lt4=s150"  style='text-decoration:none'>Marc Marquez</a></td>
+              <td>SPA</td>
+              <td>144</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td></td>
+              <td> <a href="https://www.johannzarco.fr/index.php/fr/"> Johann Zarco</a></td>
+              <td>FR</td>
+              <td>141</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td></td>
+              <td> <a href="https://www.danilopetrucci.it/">Danillo Petrucci</a> </td>
+              <td>ITA</td>
+              <td>132</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td></td>
+              <td> <a href="https://www.gpracingapparels.com/en_int/riders/jorge-lorenzo.html"> Jorge Lorenzo</a></td>
+              <td>SPA</td>
+              <td>126</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td></td>
+              <td> <a href="https://calcrutchlow.com/"> Cal Crutchlow</a></td>
+              <td>GB</td>
+              <td>111</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td></td>
+              <td> <a href="https://www.andreaiannone.com/"> Andrea Iannone</a></td>
+              <td>ITA</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td></td>
+              <td> <a href="http://www.worldsbk.com/en/rider/Sylvain+Guintoli/1886"> Sylvain Guintoli</a></td>
+              <td>FR</td>
+              <td>84</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td></td>
+              <td> <a href="https://www.motogp.com/es/riders/Alex+Rins"> Alex Rins </a></td>
+              <td>SPA</td>
+              <td>81</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td></td>
+              <td> <a href="https://www.gpracingapparels.com/es_es/pilotos/aleix-espargaro.html"> Aleix Espargaro</a></td>
+              <td>SPA</td>
+              <td>78</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div class="textoCentrado ">
+        <p> <b class="copyDispositivosRanking" >Ryderz  &reg;</b> <p>
+          </div>
+          <div class="footerNegroRanking">
+            </div>
+      
+
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+  <script>
+      let firebaseConfig = {
+    apiKey: "AIzaSyAB23E28Pu1b8HUTD9zvoLOrqorh4H9hbQ",
+    authDomain: "ryder-57290.firebaseapp.com",
+    databaseURL: "https://project-id.firebaseio.com",
+    projectId: "ryder-57290",
+    storageBucket: "ryder-57290.appspot.com",
+    messagingSenderId: "997978891812",
+  }
+  firebase.initializeApp(firebaseConfig);
+      </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

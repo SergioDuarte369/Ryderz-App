@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Sergio Duarte" />
+  <meta name="description" content="Ryderz Calendar" />
+  <title>Ryderz Champiomship</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="nysl_3.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div id="vue-motor">
+    <!--Espacio para cargar el loader en nuestro HTML-->
+    <div v-if="isLoaded">
+      <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    </div>
+    <!--Fin Espacio para cargar el loader en nuestro HTML-->
+
+    
+    <div v-else>
+        <div v-if="hideAndSeek ==true" >
+            <div class="container formatoPagina">
+              <a href="home.html">
+                <div class="divHeader">
+                  <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+      
+                </div>
+              </a>
+              <div class="espacioInferior">
+                <ul class="nav nav-pills justify-content-center">
+                  <li class="nav-item botonLi">
+                    <a class="nav-link " href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item botonLi">
+                    <a class="nav-link active" href="calendar_vue.html">Calendar</a>
+                  </li>
+                  <li class="nav-item botonLi">
+                    <a class="nav-link" href="ranking.html">Ranking</a>
+                  </li>
+                </ul>
+              </div>
+      
+      
+      
+              <div class="iconosFlex ">
+                <a href="javascript:history.back()" class="flecha-up iconosFlexX"></a>
+                <a href="chat.html">
+                  <div id="chat-btn">
+                  </div>
+                </a>
+              </div>
+              <i class="material-icons" @click="logInWithGoogle()">account_circle</i>
+              <div class="calendarFlex">
+                <div id="octoberRaces" v-if="actualMonth =='October'">
+                  <h2 class="textoCentrado h2Meses textoCalendarX">October's Races</h2>
+                  <div class="buttonFlex">
+                    <button type="button" @click="changeMonth" class="btn btn-primary btn-sm buttonWidth">Change Month
+                    </button>
+                  </div>
+      
+      
+      
+      
+      
+      
+                  <a @click="hideAndSeek = !hideAndSeek">
+                    <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar" v-for="race in octoberRaces "
+                      @click="dataClicked(race)">
+                      <div>
+                        <img v-bind:src="race.Rider_1_pic" class="img-fluid tamañoFoto" v-bind:alt="race.Rider_1">
+                        <!-- cuando hacemos v-bind: el contenido dentro de las comillas van sin {{}} -->
+                        <p class="pCalendar"><b> {{  race.Rider_1  }}</b></p>
+                      </div>
+                      <div class="middleTextCalendar">
+                        <h2 class="marginTopH2 h2Media h2landscape">Vs</h2>
+                        <h3 class="calendarText h3Media">Date: {{  race.Date  }}</h3>
+                        <h3 class="calendarText h3Media">Track: {{  race.Circuit  }}</h3>
+      
+                      </div>
+                      <div>
+                        <img v-bind:src="race.Rider_2_pic" class="img-fluid tamañoFoto" v-bind:alt="race.Rider_2">
+                        <p class="pCalendar"><b>{{  race.Rider_2 }}</b></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div id="novemberRaces" v-else-if="actualMonth== 'November'">
+                  <h2 class="textoCentrado h2Meses textoCalendarX">November's Races</h2>
+                  <div class="buttonFlex">
+                    <button type="button" @click="changeMonth" class="btn btn-primary btn-sm buttonWidth">Change Month
+                      Races</button>
+                  </div>
+                  <a @click="hideAndSeek = !hideAndSeek">
+      
+                    <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar" v-for="race in novemberRaces"
+                      @click="dataClicked(race)">
+                      <div>
+                        <img v-bind:src="race.Rider_1_pic" class="img-fluid tamañoFoto">
+                        <p class="pCalendar"><b>{{  race.Rider_1  }}</b></p>
+                      </div>
+                      <div class="middleTextCalendar">
+                        <h2 class="marginTopH2 h2Media h2landscape">Vs</h2>
+      
+                        <h3 class="calendarText h3Media">Date:{{  race.Date  }}</h3>
+                        <h3 class="calendarText h3Media">Track:{{  race.Circuit  }}</h3>
+                      </div>
+                      <div>
+                        <img v-bind:src="race.Rider_2_pic" class="img-fluid tamañoFoto">
+                        <p class="pCalendar"><b>{{  race.Rider_2  }}</b></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+      
+              </div>
+      
+      
+            </div>
+      
+      
+          </div>
+          <div v-else-if="hideAndSeek== false">
+            <!--Código html para crear la información de la carrera -->
+      
+            <div class="container formatoPagina">
+              <a href="home.html">
+                <div id="pageheader" class="divHeader">
+                  <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+                </div>
+              </a>
+              <div class="espacioInferior">
+                <ul class="nav nav-pills justify-content-center ">
+                  <li class="nav-item botonLi">
+                    <a class="nav-link" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item botonLi">
+                    <a class="nav-link active" href="calendar_vue.html">Calendar</a>
+                  </li>
+                  <li class="nav-item botonLi">
+                    <a class="nav-link" href="ranking.html">Ranking</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="iconosFlex">
+                <div v-on:click="hideAndSeek=true" class="flecha-up margin1r">
+                  <!-- div que contiene la flecha back y el icono para el chat-->
+                </div>
+                <a href="chat.html">
+                  <div id="chat-btn">
+                  </div>
+                </a>
+              </div>
+              <i class="material-icons" @click="logInWithGoogle()">account_circle</i>
+      
+              <div class="calendarFlex">
+                <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+                  <div>
+                    <img v-bind:src="this.lastClicked.imagenPiloto1" class="img-fluid tamañoFoto"
+                      v-bind:alt="this.lastClicked.piloto1">
+                    <p class="pCalendar"><b> {{  this.lastClicked.piloto1  }} </b></p>
+                  </div>
+                  <div class="middleTextCalendar">
+                    <h3 class="calendarText">Date:{{  this.lastClicked.fecha  }}</h3>
+                    <h3 class="calendarText">Track:{{  this.lastClicked.circuito  }}</h3>
+                  </div>
+                  <div>
+                    <img v-bind:src="this.lastClicked.imagenPiloto2" class="img-fluid tamañoFoto"
+                      v-bind:alt="this.lastClicked.piloto2">
+                    <p class="pCalendar"><b>{{  this.lastClicked.piloto2  }}</b></p>
+                  </div>
+                </div>
+              </div>
+              <div class="textoCentrado mapX">
+                <iframe :src="this.lastClicked.mapa" width="800" height="600" frameborder="0" style="border:0;"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div>
+      
+                <div class="buttonFlex buttonMoreTrack">
+                  <a v-bind:href="this.lastClicked.webCircuito"><button value="More Track Info"
+                      class="btn btn-primary btn-sm buttonWidth">More Track Info</button> </a>
+      
+                </div>
+                <div class="textoCentrado">
+                  <p> <b>Ryderz &reg;</b>
+                    <p>
+                </div>
+              </div>
+            </div>
+      
+      
+          </div>
+      
+    </div>
+  </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script>
+      let firebaseConfig = {
+        apiKey: "AIzaSyAB23E28Pu1b8HUTD9zvoLOrqorh4H9hbQ",
+        authDomain: "ryder-57290.firebaseapp.com",
+        databaseURL: "https://project-id.firebaseio.com",
+        projectId: "ryder-57290",
+        storageBucket: "ryder-57290.appspot.com",
+        messagingSenderId: "997978891812",
+      }
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="./vue.js"></script>
+    <script src="./Ryderz_vue.js"></script>
+</body>
+
+</html>

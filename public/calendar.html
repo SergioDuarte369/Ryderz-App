@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Sergio Duarte" />
+  <meta name="description" content="Ryderz Calendar" />
+  <title>Ryderz Champiomship</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="nysl_3.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="vue-motor">
+    <div v-if="hideAndSeek ==true">
+      <div class="container formatoPagina">
+        <div class="divHeader">
+          <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+        </div>
+
+        <div class="espacioInferior">
+          <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="calendar.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ranking.html">Ranking</a>
+            </li>
+          </ul>
+        </div>
+        <div class="calendarFlex">
+          <div id="octoberRaces" v-if="actualMonth=='October'">
+            <h2 class="textoCentrado">October's Races</h2>
+            <div class="buttonFlex">
+              <button type="button" @click="changeMonth" class="btn btn-primary btn-sm buttonWidth">Change Month
+                Races</button>
+            </div>
+            <a @click="hideAndSeek = !hideAndSeek">
+            <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/u6ch8RQGmGNmenIuxA1t3TDIOoCgpFaG0NAXgdgSXplbQN9wF5-dsIZ3I_ZQe6rKQQca=s97"
+                  class="img-fluid tamañoFoto" alt="Valentino Rossi">
+                <p><b>Valentino Rossi</b></p>
+              </div>
+              <div class="middleTextCalendar">
+                <h2 class="marginTopH2 h2Media">Vs</h2>
+                <h3 class="calendarText h3Media">Date: 18th October 2019</h3>
+                <h3 class="calendarText h3Media">Track: Jerez de la Frontera</h3>
+
+              </div>
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/Ysqrdh8-K_mk3H3PxyPowyLLGyO4ihDSz6lyy0v33LPfV5_YNCfIqkQJB-IVPvvIxr5cO0I=s97"
+                  class="img-fluid tamañoFoto" alt="Sete Gibernau">
+                <p><b>Sete Gibernau</b></p>
+              </div>
+            </div>
+          </a>
+            <a @click="hideAndSeek = !hideAndSeek">
+            <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/OUx5x1g2Fz7SbkpbizsZrsQH-rmTZqwilO7jLhxR6W5RUpiIrZthpR89XCVpOu9tkxYpsg=s97"
+                  class="img-fluid tamañoFoto" alt="Marc Marquez">
+                <p><b>Marc Marquez</b></p>
+              </div>
+              <div class="middleTextCalendar">
+                <h2 class="marginTopH2 h2Media">Vs</h2>
+
+                <h3 class="calendarText h3Media">Date: 18th October 2019</h3>
+                <h3 class="calendarText h3Media">Track: Jerez de la Frontera</h3>
+              </div>
+              <div>
+                <img src="https://photos.motogp.com/2019/riders/motogp/grid/206x181/rider_7236_1554806205.jpg"
+                  class="img-fluid tamañoFoto" alt="Johann Zarco">
+                <p><b>Johann Zarco</b></p>
+              </div>
+            </div>
+          </a>
+            <a @click="hideAndSeek = !hideAndSeek">
+            <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+              <div>
+                <img src="https://photos.motogp.com/2019/riders/motogp/grid/206x181/rider_8148_1561562115.jpg"
+                  class="img-fluid tamañoFoto" alt="Danillo Petrucci">
+                <p><b>Danillo Petrucci</b></p>
+              </div>
+              <div class="middleTextCalendar">
+                <h2 class="marginTopH2 h2Media">Vs</h2>
+
+                <h3 class="calendarText h3Media">Date: 18th October 2019</h3>
+                <h3 class="calendarText h3Media">Track: Jerez de la Frontera</h3>
+              </div>
+              <div>
+                <img
+                  src="https://e00-marca.uecdn.es/assets/v14/img/estaticas/motor/motociclismo/pilotos/jorge-lorenzo.jpg"
+                  class="img-fluid tamañoFoto" alt="Jorge Lorenzo">
+                <p><b>Jorge Lorenzo</b></p>
+              </div>
+            </div>
+          </a>
+            <a @click="hideAndSeek = !hideAndSeek">
+            <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/2WIgM1mCCisRFmGb6E4_g_RJ3JIQbIB_eyhI6s7JzieTDjuQ8wZrZeXhKUFU6rSJSRCt=s97"
+                  class="img-fluid tamañoFoto" alt="Cal Crutchlow">
+                <p><b>Cal Crutchlow</b></p>
+              </div>
+              <div class="middleTextCalendar">
+                <h2 class="marginTopH2 h2Media">Vs</h2>
+
+                <h3 class="calendarText h3Media">Date: 27th October 2019</h3>
+                <h3 class="calendarText h3Media">Track: Jarama</h3>
+              </div>
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/OUx5x1g2Fz7SbkpbizsZrsQH-rmTZqwilO7jLhxR6W5RUpiIrZthpR89XCVpOu9tkxYpsg=s97"
+                  class="img-fluid tamañoFoto" alt="Marc Marquez">
+                <p><b>Marc Marquez</b></p>
+              </div>
+            </div>
+          </a>
+            <a @click="hideAndSeek = !hideAndSeek">
+            <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/Ysqrdh8-K_mk3H3PxyPowyLLGyO4ihDSz6lyy0v33LPfV5_YNCfIqkQJB-IVPvvIxr5cO0I=s97"
+                  class="img-fluid tamañoFoto" alt="Sete Gibernau">
+                <p><b>Sete Gibernau</b></p>
+              </div>
+              <div class="middleTextCalendar">
+                <h2 class="marginTopH2 h2Media">Vs</h2>
+
+                <h3 class="calendarText h3Media">Date: 27th October 2019</h3>
+                <h3 class="calendarText h3Media">Track: Jarama</h3>
+              </div>
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/M5jjZ2j5DtMAATsCLIwhvIqsmxPU8teddHmqAEnrP1V3YscXbDkOn4WP2G67rm49LYCd=s97"
+                  class="img-fluid tamañoFoto" alt="Andrea Iannone">
+                <p><b>Andrea Iannone</b></p>
+              </div>
+            </div>
+          </a>
+            <a @click="hideAndSeek = !hideAndSeek">
+            <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/y2TplUekBAzrIZXgXYP_0dDUP-OCUYUicks_t4mKJmLE49IF-b_fp_vfjx4ye8IeeKM=s97"
+                  class="img-fluid tamañoFoto" alt="Sylvain Guintoli">
+                <p><b>Sylvain Guintoli</b></p>
+              </div>
+              <div class="middleTextCalendar">
+                <h2 class="marginTopH2 h2Media">Vs</h2>
+
+                <h3 class="calendarText h3Media">Date: 27th October 2019</h3>
+                <h3 class="calendarText h3Media">Track: Jarama</h3>
+              </div>
+              <div>
+                <img src="https://f1sport.auto.cz/GetFile.aspx?id_file=405214584" class="img-fluid tamañoFoto"
+                  alt="Alex Rins">
+                <p><b>Alex Rins</b></p>
+              </div>
+            </div>
+          </a>
+          </div>
+          <div id="novemberRaces" v-else-if="actualMonth= 'November'">
+            <h2 class="textoCentrado">November's Races</h2>
+            <div class="buttonFlex">
+              <button type="button" @click="changeMonth" class="btn btn-primary btn-sm buttonWidth">Change Month
+                Races</button>
+            </div>
+            <a @click="hideAndSeek = !hideAndSeek">
+              <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+                <div>
+                  <img src="https://f1sport.auto.cz/GetFile.aspx?id_file=405214584" class="img-fluid tamañoFoto"
+                    alt="Alex Rins">
+                  <p><b>Alex Rins</b></p>
+                </div>
+                <div class="middleTextCalendar">
+                  <h2 class="marginTopH2 h2Media">Vs</h2>
+
+                  <h3 class="calendarText h3Media">Date: 9th November 2019</h3>
+                  <h3 class="calendarText h3Media">Track: Albacete</h3>
+                </div>
+                <div>
+                  <img
+                    src="https://lh3.googleusercontent.com/5g8znhH4Hsb2v0FzZ1gCIjyf0tvI9mF9QaY_1zdqgd0UPo7q1dkZ3XujxJE6CsKRmo55=s97"
+                    class="img-fluid tamañoFoto" alt="Aleix Espargaro">
+                  <p><b>Aleix Espargaro</b></p>
+                </div>
+              </div>
+            </a>
+            <a @click="hideAndSeek = !hideAndSeek">
+            <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/u6ch8RQGmGNmenIuxA1t3TDIOoCgpFaG0NAXgdgSXplbQN9wF5-dsIZ3I_ZQe6rKQQca=s97"
+                  class="img-fluid tamañoFoto" alt="Valentino Rossi">
+                <p><b>Valentino Rossi</b></p>
+              </div>
+              <div class="middleTextCalendar">
+                <h2 class="marginTopH2 h2Media">Vs</h2>
+
+                <h3 class="calendarText h3Media">Date: 9th November 2019</h3>
+                <h3 class="calendarText h3Media">Track: Albacete</h3>
+              </div>
+              <div>
+                <img
+                  src="https://e00-marca.uecdn.es/assets/v14/img/estaticas/motor/motociclismo/pilotos/jorge-lorenzo.jpg"
+                  class="img-fluid tamañoFoto" alt="Jorge Lorenzo">
+                <p><b>Jorge Lorenzo</b></p>
+              </div>
+            </div>
+          </a>
+          <a @click="hideAndSeek = !hideAndSeek">
+            <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/y2TplUekBAzrIZXgXYP_0dDUP-OCUYUicks_t4mKJmLE49IF-b_fp_vfjx4ye8IeeKM=s97"
+                  class="img-fluid tamañoFoto" alt="Sylvain Guintoli">
+                <p><b>Sylvain Guintoli</b></p>
+              </div>
+              <div class="middleTextCalendar">
+                <h2 class="marginTopH2 h2Media">Vs</h2>
+
+                <h3 class="calendarText h3Media">Date: 9th November 2019</h3>
+                <h3 class="calendarText h3Media">Track: Albacete</h3>
+              </div>
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/OUx5x1g2Fz7SbkpbizsZrsQH-rmTZqwilO7jLhxR6W5RUpiIrZthpR89XCVpOu9tkxYpsg=s97"
+                  class="img-fluid tamañoFoto" alt="Marc Marquez">
+                <p><b>Marc Marquez</b></p>
+              </div>
+            </div>
+          </a>
+          <a @click="hideAndSeek = !hideAndSeek">
+            <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+              <div>
+                <img
+                  src="https://lh3.googleusercontent.com/M5jjZ2j5DtMAATsCLIwhvIqsmxPU8teddHmqAEnrP1V3YscXbDkOn4WP2G67rm49LYCd=s97"
+                  class="img-fluid tamañoFoto" alt="Andrea Iannone">
+                <p><b>Andrea Iannone</b></p>
+              </div>
+              <div class="middleTextCalendar">
+                <h2 class="marginTopH2 h2Media">Vs</h2>
+
+                <h3 class="calendarText h3Media">Date: 30th November 2019</h3>
+                <h3 class="calendarText h3Media">Track: Nurburgring</h3>
+              </div>
+              <div>
+                <img src="https://photos.motogp.com/2019/riders/motogp/grid/206x181/rider_8148_1561562115.jpg"
+                  class="img-fluid tamañoFoto" alt="Danillo Petrucci">
+                <p><b>Danillo Petrucci</b></p>
+              </div>
+            </div>
+          </a>
+
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+    <div v-else-if="hideAndSeek== false">
+
+      <div class="container formatoPagina">
+        <div id="pageheader" class="divHeader">
+          <img src="Ryderz.png" alt="Logo_ryderz" class="logo marginLogo imageMargin">
+        </div>
+
+        <div class="espacioInferior">
+          <ul class="nav nav-pills justify-content-center ">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="calendar.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ranking.html">Ranking</a>
+            </li>
+          </ul>
+        </div>
+        <div class="calendarFlex">
+          <div class="flexCalendar divCalendarBackground espacioPosteriorDivCalendar">
+            <div>
+              <img
+                src="https://lh3.googleusercontent.com/u6ch8RQGmGNmenIuxA1t3TDIOoCgpFaG0NAXgdgSXplbQN9wF5-dsIZ3I_ZQe6rKQQca=s97"
+                class="img-fluid tamañoFoto" alt="Valentino Rossi">
+              <p><b>Valentino Rossi</b></p>
+            </div>
+            <div class="middleTextCalendar">
+              <h3 class="calendarText">Date: 18th October 2019</h3>
+              <h3 class="calendarText">Track: Jerez de la Frontera</h3>
+            </div>
+            <div>
+              <img
+                src="https://lh3.googleusercontent.com/Ysqrdh8-K_mk3H3PxyPowyLLGyO4ihDSz6lyy0v33LPfV5_YNCfIqkQJB-IVPvvIxr5cO0I=s97"
+                class="img-fluid tamañoFoto" alt="Sete Gibernau">
+              <p><b>Sete Gibernau</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="textoCentrado">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.552143255498!2d-6.036066984712671!3d36.70929857996724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0db8d2691e68e7%3A0x6b9e763f426cca6f!2sCircuito%20de%20Jerez!5e0!3m2!1ses!2ses!4v1567083296114!5m2!1ses!2ses"
+            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+
+
+
+        <div class="textoCentrado">
+          <p> <b>Ryderz &reg;</b>
+            <p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="./vue.js"></script>
+  <script src="./Ryderz_vue.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,988 @@
+body {
+  font-family: Helvetica, Verdana, Arial, sans-serif; 
+  background-repeat: no-repeat; 
+  background-size: 150px 150px, 1024px 768px ;
+  background-attachment: fixed;
+}
+.espacioInferior{
+  margin-bottom: 2rem;
+}
+.textoCentrado{
+  display: flex;
+  justify-content: center;
+}
+.logo{
+  display: flex;
+  justify-content: flex-start;
+  width: 15rem;
+}
+.formatoPagina{
+  display: flex;
+  flex-direction: column;
+}
+.divHeader{
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    background: black;
+    height: 6rem;
+}
+.marginLogo{
+  margin-bottom: -3rem;
+}
+.espacioInferior3rem{
+  margin-bottom:3rem;
+}
+.bodyFlex{
+  display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.calendarFlex{
+  display: flex;
+  flex-direction: column;
+}
+p{
+  text-align: justify
+}
+.videoFlex{
+  width: 100%;
+  height: 459px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;  
+}
+.imageMargin{
+  margin-top: -12.5rem;
+}
+nav-pills{
+  color: #fff;
+  background:none; 
+}
+nav-link.active{
+  background: none;
+
+}
+.colorBoton{
+  background-color:#c62222;
+  border-color: #c62222;
+}
+.flexCalendar{
+  display: flex;
+    justify-content: space-around;
+}
+.tamañoFoto{
+  width:105px;
+  margin-top: 1rem;
+  border-radius:180px;
+  border:3px solid #7d7d7d;
+}
+.divCalendarBackground{
+  background: whitesmoke;
+}
+.middleTextCalendar{
+  margin-top: 4rem;
+  text-align: center;
+}
+.calendarText{
+  font-size: 1.5rem;
+  text-align: center;
+}
+.espacioPosteriorDivCalendar{
+  margin-bottom: 1rem;
+}
+.container{
+  min-width: 100%;
+
+}
+/*Atributos para chat*/
+.backgroundChat{
+background-color: #080000;
+}
+.containerChat {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin: 10px 0;
+  max-width: 24rem;
+}
+.containerChatRight{
+float: right;
+margin-top: 1rem;
+}
+.containerChatLeft{
+  float: left;
+  margin-top: 1rem;
+}
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.containerChat::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.containerChat img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.containerChat img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+.textArea{
+  display: flex;
+  min-width: 50%;
+  align-content: right;
+}
+.backgroundBlanco{
+  background-color: #ffffff;
+}
+.sumbmitStyle{
+  display: flex;
+}
+
+.talk-bubble {
+    margin: 1.5vh 3vh;
+    display: inline-block;
+    position: relative;
+    height: auto;
+    background-color: lightyellow;
+    margin-left: 1rem;
+}
+.talktextLeft {
+  padding: 0.5rem 1.5rem;
+  text-align: left;
+  line-height: 1.5em;}
+  .justify-content-start {
+    -ms-flex-pack: start!important;
+    justify-content: flex-start!important;
+}
+  .d-flex {
+    flex-direction: column;
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.round {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
+.tri-right.left-top:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: lightyellow transparent transparent transparent;
+}
+.name {
+  margin: 5px;
+  font-size: 1rem;
+  color: #0c0c0c;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.pChat{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+.chat {
+overflow: auto;
+height: 27rem;
+background-color: rgba(0, 0, 0, .03);
+border-radius: 5vh;}
+.flex-column {
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
+}
+.div_sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.marginTopH2{
+  margin-top: -3rem;
+}
+.numero1{
+  color: gold;
+}
+.numero2{
+  color: silver;
+}
+.numero3{
+  color:#cd7f32;
+}
+.buttonWidth{
+  width: 12rem;
+}
+.buttonFlex{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.flecha-up { /*para cambiar la dirección a la que apunta la flecha, debemos cambiar los grados en transfor.: rotate*/
+  width:0px;
+  height:0px;
+  border-left:25px solid transparent; /* izquierda flecha */
+  border-right:25px solid transparent; /* derecha flecha */
+  border-bottom:30px solid #0A0A0A; /* base flecha y color*/
+  transform: rotate(270deg);
+  font-size:0px;
+  line-height:0px;
+}
+.buttonMoreTrack{
+    margin-top: 1rem;
+}
+.botonLi{
+  width: 21%;
+  text-align: center;
+}
+.margin1r{
+  margin-bottom: 1rem;
+}
+#chat-btn {
+  width: 60px;
+  height: 33px;
+  background-color: #0A0A0A;
+  border-radius: 12px;
+  position: relative;
+}
+#chat-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 10px;
+    bottom: -10px;
+    border-left: 10px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 10px solid #0A0A0A;
+}
+.iconosFlex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.material-icons{
+  font-size: 6rem;
+  color: #c62222;
+  display: flex;
+    justify-content: center;
+}
+.chatContentFit{
+  width: fit-content;
+}
+
+
+/*Codigo para loader..............................................................................................*/
+
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0A0A0A;
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Fin Css para pantalla versión ordenador............................................................................*/
+
+
+
+/*Media queries para ipad en posición acostada o landscape*/
+/* Media Queries for Ipad*/
+
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+.iframeMotos{
+  width: 100%;
+  min-height: 27rem;
+} 
+.botonLi{
+  width: 30%;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  border-radius: 30px;
+  height: 4rem;
+  color: #fff;
+  background-color: #007bff;
+}
+ul{
+  font-size: 2rem;
+}
+.pHome{
+  font-size: 1.8rem;
+  text-align: justify;
+  font-weight: bold;
+}
+.h1Big{
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+.h2Big{
+  
+    font-weight: bold;
+    font-size: 3.5rem;
+text-align: center;
+}
+.h2Meses{
+      font-size: 3rem;
+    font-weight: bold;
+}
+.buttonWidth {
+  font-size: 2.1rem;
+  height: 4rem;
+  width: 17rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.flexCalendar {
+  height: 14rem;
+}
+.tamañoFoto {
+  width: 174px;
+}
+.pCalendar{
+    font-size: 1.8rem;
+    text-align: justify;
+    margin-left: -1.6rem;
+}
+.espacioPosteriorDivCalendar {
+  margin-bottom: 2rem;
+}
+.videoFlex{
+  margin-top: 3rem;
+}
+.tableRanking {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  height: 52rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.nav-pills .nav-link {
+  font-weight: bold;
+  border-radius: .25rem;
+}
+.h2landscape{
+  font-size: 4rem;
+}
+.calendarText {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+.flecha-up {
+  width: 0px;
+  margin-bottom: 2rem;
+  height: 0px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #0A0A0A;
+  transform: rotate(270deg);
+  font-size: 0px;
+  line-height: 0px;
+}
+.h2Big {
+  margin-bottom: 1rem;
+  margin-top: -2rem;
+  font-weight: bold;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.copyDispositivos{
+  font-size: 1.5rem;
+    margin-top: -1rem;
+}
+.copyDispositivosRanking{
+font-size: 2rem;
+}
+}
+/*Media queries para ipad en modo vertical o portrait */
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+  .iframeMotos{
+  width: 100%;
+  min-height: 36rem;
+}
+.h3Media{
+  display:none;
+}
+.h2Media{
+  margin-top: 1rem;
+  font-size: 6rem;
+}
+.margenSuperior{
+  margin-top: 18rem;
+}
+.videoFlex{
+  margin-top: 6rem;
+}
+.divHeader
+{
+  height: 9rem;
+}
+.marginLogo {
+  margin-bottom: 2rem;
+}
+.logo{
+  width: 22rem;
+}
+.botonLi{
+  width: 30%;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  border-radius: 30px;
+  height: 4rem;
+  color: #fff;
+  background-color: #007bff;
+}
+ul{
+  font-size: 2rem;
+}
+.pHome{
+  font-size: 1.8rem;
+  text-align: justify;
+  font-weight: bold;
+}
+.h1Big{
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+.h2Big{
+  
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-align: center;
+
+}
+.h2Meses{
+      font-size: 3rem;
+    font-weight: bold;
+}
+.buttonWidth {
+  font-size: 2.1rem;
+  height: 4rem;
+  width: 17rem;
+  margin-bottom: 1rem;
+}
+.flexCalendar {
+  height: 14rem;
+}
+.tamañoFoto {
+  width: 174px;
+}
+.pCalendar{
+    font-size: 1.8rem;
+    text-align: justify;
+    margin-left: -1.6rem;
+}
+.espacioPosteriorDivCalendar {
+  margin-bottom: 2rem;
+}
+.tableRanking {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  height: 52rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.nav-pills .nav-link {
+  font-weight: bold;
+  border-radius: .25rem;
+}
+.calendarText {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+.chat {
+  overflow: auto;
+  height: 41rem;
+  background-color: rgba(0, 0, 0, .03);
+  border-radius: 5vh;
+  margin-top: 4rem;
+}
+.copyDispositivos{
+  font-size: 1.5rem;
+    margin-top: 3rem;
+}
+.copyDispositivosRanking{
+  font-size: 2rem;
+  }
+}
+/*******************************************************************************/
+/*Media Queries for i-phone x*/
+
+/*Media queries para i-phone x en modo acostado o landscape*/
+
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) { 
+  .iframeMotos{
+    width: 100%;
+    min-height: 27rem;
+  } 
+  .iframeMotos{
+    width: 100%;
+    min-height: 27rem;
+  } 
+  .divHeader
+  {
+      height: 15rem;
+      margin-top: -1rem;
+  }
+  .marginLogo {
+    margin-bottom: 7rem;
+  }
+  .logo{
+    width: 40rem;
+  }
+  .botonLi{
+    width: 30%;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    height: 4rem;
+    color: #fff;
+    background-color: #007bff;
+  }
+  ul{
+    font-size: 2rem;
+  }
+  .pHome{
+    font-size: 1.8rem;
+    text-align: justify;
+    font-weight: bold;
+  }
+  .h1Big{
+    font-size: 4.5rem;
+    font-weight: bold;
+  }
+  .h2Big{
+    
+      font-weight: bold;
+      font-size: 3.5rem;
+  text-align: center;
+  }
+  .h2Meses{
+        font-size: 3rem;
+      font-weight: bold;
+  }
+  .buttonWidth {
+    font-size: 2.1rem;
+    height: 4rem;
+    width: 17rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .flexCalendar {
+    height: 14rem;
+  }
+  .tamañoFoto {
+    width: 174px;
+  }
+  .pCalendar{
+      font-size: 1.8rem;
+      text-align: justify;
+      margin-left: -1.6rem;
+  }
+  .espacioPosteriorDivCalendar {
+    margin-bottom: 2rem;
+  }
+  .videoFlex{
+    margin-top: 3rem;
+  }
+  .tableRanking {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    height: 52rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .nav-pills .nav-link {
+    font-weight: bold;
+    border-radius: .25rem;
+  }
+  .h2landscape{
+    font-size: 4rem;
+  }
+  .calendarText {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .flecha-up {
+    width: 0px;
+    margin-bottom: 2rem;
+    height: 0px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #0A0A0A;
+    transform: rotate(270deg);
+    font-size: 0px;
+    line-height: 0px;
+  }
+  .h2Big {
+    margin-bottom: 1rem;
+    margin-top: -2rem;
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .copyDispositivosRanking{
+    font-size: 2rem;
+    }
+  .textoCalendarX{
+  
+  }
+  .iconosFlexX{
+    
+  }
+}
+
+/*Media queries para i-phone x en modo vertical o portrait*/
+
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) { 
+  .iframeMotos{
+    width: 100%;
+    min-height: 36rem;
+  }
+  .h3Media{
+    display:none;
+  }
+  .h2Media{
+    font-size: 5rem;
+  }
+  .iframeMotos{
+    margin-bottom: -17rem;
+    width: 100%;
+    min-height: 36rem;
+}
+  .h3Media{
+    display:none;
+  }
+  .h2Media{
+    
+      font-size: 8rem;
+      margin-top: 2rem;
+    }
+  .margenSuperior{
+    margin-top: 18rem;
+  }
+  .videoFlex{
+    margin-top: 9rem;
+  }
+  .divHeader
+  {
+      height: 18rem;
+      margin-top: -1rem;
+  }
+  .marginLogo {
+    margin-bottom: 7rem;
+  }
+  .logo{
+    width: 40rem;
+  }
+  .botonLi{
+    width: 30%;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    
+      height: 6rem;
+      color: #fff;
+      background-color: #007bff;
+      font-size: 3rem;
+      border-radius: 33px;
+  
+  }
+  ul{
+    font-size: 2rem;
+  }
+  .pHome{
+    font-size: 2.7rem;
+    text-align: justify;
+    font-weight: bold;
+}
+  .h1Big{
+    margin-top: 1rem;
+    font-size: 7.5rem;
+    font-weight: bold;
+}
+  .h2Big{
+      margin-top: 1rem;
+      font-size: 6.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 3rem;
+  }
+  .h2Meses{
+        font-size: 3rem;
+      font-weight: bold;
+  }
+  .buttonWidth{
+    font-size: 2.9rem;
+    height: 5rem;
+    width: 30rem;
+    margin-bottom: 1rem;
+}
+  .flexCalendar {
+    height: 21rem;
+    }
+  .tamañoFoto {
+    width: 270px;
+  }
+  .pCalendar{
+      font-size: 2.7rem;
+      text-align: justify;
+      margin-left: -1.6rem;
+    }
+  .espacioPosteriorDivCalendar {
+    margin-bottom: 3rem;
+  }
+  .tableRanking{
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 2.4rem;
+    height: 80rem;
+    width: 100%;
+    margin-bottom: -10rem;
+}
+  .nav-pills .nav-link {
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: .25rem;
+  }
+  .calendarText {
+    display: none;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .chat {
+    overflow: auto;
+    height: 58rem;
+    background-color: rgba(0, 0, 0, .03);
+    border-radius: 5vh;
+    margin-top: 4rem;
+  }
+  .margenInferior{
+    margin-top: 9rem;
+  }
+  .textoCentrado {
+      font-size: 4rem;
+      margin-top: 12rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+  }
+.footerNegro{
+  background-color: black;
+  width: 100%;
+  height: 17rem;
+  margin-top: 3rem;
+}
+.h2X{
+  font-size: 7rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.textoCalendarX{
+  
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 6rem;
+}
+.footerNegroRanking{
+  
+    height: 9rem;
+    background-color: black;
+    width: 100%;
+    margin-top: -1rem;
+
+}
+.copyDispositivosRanking{
+  font-size: 3rem;
+  }
+  .mapX{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  .iconosFlexX{
+
+  }
+ }
+
+
+/*Media Queries for Galaxy S5*/
+/*Media queries para  Galaxy S5 en modo acostado o  landscape */
+
+
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+    .iframeMotos{
+      width: 100%;
+      min-height: 27rem;
+    } 
+}
+
+
+/*Media queries para Galaxy S5 en modo vertical o portrait */
+
+
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    .iframeMotos{
+      width: 100%;
+      min-height: 36rem;
+    }
+    .videoFlex{
+      margin-top: 8rem;
+    }
+    .h3Media{
+      display:none;
+    }
+    .h2Media{
+      font-size: 5rem;
+    }
+}

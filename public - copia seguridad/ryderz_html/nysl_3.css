@@ -1,0 +1,332 @@
+body {
+  font-family: Helvetica, Verdana, Arial, sans-serif; 
+  background-repeat: no-repeat; 
+  background-size: 150px 150px, 1024px 768px ;
+  background-attachment: fixed;
+}
+.espacioInferior{
+  margin-bottom: 2rem;
+}
+.textoCentrado{
+  display: flex;
+  justify-content: center;
+}
+.logo{
+  display: flex;
+  justify-content: flex-start;
+  width: 15rem;
+}
+.formatoPagina{
+  display: flex;
+  flex-direction: column;
+}
+.divHeader{
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    background: black;
+    height: 6rem;
+}
+.marginLogo{
+  margin-bottom: -3rem;
+}
+.espacioInferior3rem{
+  margin-bottom:3rem;
+}
+.bodyFlex{
+  display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.calendarFlex{
+  display: flex;
+  flex-direction: column;
+}
+p{
+  text-align: justify
+}
+.videoFlex{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;  
+}
+.imageMargin{
+  margin-top: -12.5rem;
+}
+nav-pills{
+  color: #fff;
+  background:none; 
+}
+nav-link.active{
+  background: none;
+
+}
+.colorBoton{
+  background-color:#c62222;
+  border-color: #c62222;
+}
+.flexCalendar{
+  display: flex;
+    justify-content: space-around;
+}
+.tamañoFoto{
+  width:105px;
+  margin-top: 1rem;
+  border-radius:180px;
+  border:3px solid #7d7d7d;
+}
+.divCalendarBackground{
+  background: whitesmoke;
+}
+.middleTextCalendar{
+  margin-top: 4rem;
+  text-align: center;
+}
+.calendarText{
+  font-size: 1.5rem;
+  text-align: center;
+}
+.espacioPosteriorDivCalendar{
+  margin-bottom: 1rem;
+}
+.container{
+  min-width: 100%;
+
+}
+/*Atributos para chat*/
+.backgroundChat{
+background-color: #080000;
+}
+.containerChat {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin: 10px 0;
+  max-width: 24rem;
+}
+.containerChatRight{
+float: right;
+margin-top: 1rem;
+}
+.containerChatLeft{
+  float: left;
+  margin-top: 1rem;
+}
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.containerChat::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.containerChat img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.containerChat img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+.textArea{
+  display: flex;
+  min-width: 50%;
+  align-content: right;
+}
+.backgroundBlanco{
+  background-color: #ffffff;
+}
+.sumbmitStyle{
+  display: flex;
+}
+
+.talk-bubble {
+    margin: 1.5vh 3vh;
+    display: inline-block;
+    position: relative;
+    height: auto;
+    background-color: lightyellow;
+}
+.talktextLeft {
+  padding: 0.5rem 1.5rem;
+  text-align: left;
+  line-height: 1.5em;}
+  .justify-content-start {
+    -ms-flex-pack: start!important;
+    justify-content: flex-start!important;
+}
+  .d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.round {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
+.tri-right.left-top:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: lightyellow transparent transparent transparent;
+}
+.name {
+  margin: 5px;
+  font-size: 0.8rem;
+  color: darkgrey;
+  font-weight: bolder;
+}
+.chat {
+overflow: auto;
+height: 27rem;
+background-color: rgba(0, 0, 0, .03);
+border-radius: 5vh;}
+.flex-column {
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
+}
+.div_sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.marginTopH2{
+  margin-top: -3rem;
+}
+.numero1{
+  color: gold;
+}
+.numero2{
+  color: silver;
+}
+.numero3{
+  color:#cd7f32;
+}
+
+
+/* Media Queries for Ipad*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+.iframeMotos{
+  width: 100%;
+  min-height: 27rem;
+} 
+
+
+
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+  .iframeMotos{
+  width: 100%;
+  min-height: 36rem;
+}
+.h3Media{
+  display:none;
+}
+.h2Media{
+  font-size: 5rem;
+}
+}
+  
+
+
+/*Media Queries for i-phone x*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) { 
+  .iframeMotos{
+    width: 100%;
+    min-height: 27rem;
+  } 
+  
+}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) { 
+  .iframeMotos{
+    width: 100%;
+    min-height: 36rem;
+  }
+  .h3Media{
+    display:none;
+  }
+  .h2Media{
+    font-size: 5rem;
+  }
+ }
+
+
+/*Media Queries for Galaxy S5*/
+/* Galaxy S5 portrait */
+
+/* Galaxy S5 landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+    .iframeMotos{
+      width: 100%;
+      min-height: 27rem;
+    } 
+}
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    .iframeMotos{
+      width: 100%;
+      min-height: 36rem;
+    }
+    .videoFlex{
+      margin-top: 8rem;
+    }
+    .h3Media{
+      display:none;
+    }
+    .h2Media{
+      font-size: 5rem;
+    }
+}
